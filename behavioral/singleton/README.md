@@ -23,8 +23,11 @@ Una de las principales desventajas de este patrón de diseño es que no es
 optar por la clase `ThreadSafeDataBaseConnection` cuya única diferencia es que
 el método estático `getInstance()` utiliza una verificación doble de nulos y un
 bloque `synchronized` para garantizar que solo se cree una instancia en un entorno *multi-thread*.
+La comprobación doble se establece para mitigar la sobrecarga provocada por la ejecución del bloque `synchronized`.
 
-La verificación doble se establece para mitigar la sobrecarga provocada por la ejecución del bloque `synchronized`.
+Otra solución mejorada del patrón Singleton es usando un `Enum` de un solo elemento.
+La clase `EnumDataBaseConnection` es un ejemplo de implementación. El uso de `Enum` ayuda con algunas 
+limitaciones del patrón Singleton como la serialización/deserialización, *thread-safe*, entre otras.
 
 Es importante, como parte del análisis de diseño, valorar las desventajas al utilizar el patrón Singleton
 sobre todo en aplicaciones concurrentes.
