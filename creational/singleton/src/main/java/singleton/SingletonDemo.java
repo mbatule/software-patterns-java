@@ -7,23 +7,20 @@ public class SingletonDemo {
         String query = "Some query";
 
         System.out.println("Usando DataBaseConnection");
-        DataBaseConnection dataBaseConnection = DataBaseConnection.getInstance();
-        dataBaseConnection.connect();
-        dataBaseConnection.execute(query);
-        dataBaseConnection.close();
-        System.out.println();
+        useDBConnection(DataBaseConnection.getInstance(), query);
 
+        System.out.println();
         System.out.println("Usando ThreadSafeDataBaseConnection");
-        ThreadSafeDataBaseConnection threadSafeDataBaseConnection = ThreadSafeDataBaseConnection.getInstance();
-        threadSafeDataBaseConnection.connect();
-        threadSafeDataBaseConnection.execute(query);
-        threadSafeDataBaseConnection.close();
-        System.out.println();
+        useDBConnection(ThreadSafeDataBaseConnection.getInstance(), query);
 
+        System.out.println();
         System.out.println("Usando EnumDataBaseConnection");
-        EnumDataBaseConnection enumDataBaseConnection = EnumDataBaseConnection.INSTANCE;
-        enumDataBaseConnection.connect();
-        enumDataBaseConnection.execute(query);
-        enumDataBaseConnection.close();
+        useDBConnection(EnumDataBaseConnection.INSTANCE, query);
+    }
+
+    private static void useDBConnection(DBConnection dbConnection, String query) {
+        dbConnection.connect();
+        dbConnection.execute(query);
+        dbConnection.close();
     }
 }

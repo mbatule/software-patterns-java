@@ -1,6 +1,6 @@
 package singleton;
 
-public enum EnumDataBaseConnection {
+public enum EnumDataBaseConnection implements DBConnection {
 
     INSTANCE;
 

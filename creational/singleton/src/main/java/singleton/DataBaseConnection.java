@@ -1,6 +1,6 @@
 package singleton;
 
-public class DataBaseConnection {
+public class DataBaseConnection implements DBConnection {
     private static DataBaseConnection instance = null;
 
     private DataBaseConnection() {

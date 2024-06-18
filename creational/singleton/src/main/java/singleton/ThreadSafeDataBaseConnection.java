@@ -1,6 +1,6 @@
 package singleton;
 
-public class ThreadSafeDataBaseConnection {
+public class ThreadSafeDataBaseConnection implements DBConnection {
     private static ThreadSafeDataBaseConnection instance = null;
 
     private ThreadSafeDataBaseConnection() {
