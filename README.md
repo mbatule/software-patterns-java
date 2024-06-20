@@ -7,11 +7,9 @@ Este proyecto tiene como objetivo proporcionar una implementación de referencia
 principales patrones de diseño en Java. Los patrones de diseño implementados en este proyecto 
 se dividen en tres categorías principales:
 
-- [Patrones Creacionales](#Patrones Creacionales).
-
-- [Patrones Estructurales](#Patrones Estructurales).
-
-- [Patrones de Comportamiento](#Patrones Comportamiento).
+- Patrones Creacionales.
+- Patrones Estructurales.
+- Patrones de Comportamiento.
 
 Cada patrón se implementa en un módulo separado, lo que permite a los desarrolladores estudiar 
 y utilizar estos patrones de manera individual o en conjunto.
@@ -22,6 +20,7 @@ Estos patrones se encargan de la creación de objetos, proporcionando
 formas flexibles y eficientes de crear instancias de clases.
 
 - [Singleton](./creational/singleton/README.md)
+- [Abstract Factory](./creational/abstract-factory/README.md)
 
 ## Patrones Estructurales
 
