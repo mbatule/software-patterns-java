@@ -20,6 +20,7 @@ Estos patrones se encargan de la creación de objetos, proporcionando
 formas flexibles y eficientes de crear instancias de clases.
 
 - [Singleton](./creational/singleton/README.md)
+- [Factory Method](./creational/factory-method/README.md)
 - [Abstract Factory](./creational/abstract-factory/README.md)
 
 ## Patrones Estructurales
